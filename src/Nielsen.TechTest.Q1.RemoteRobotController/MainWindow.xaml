@@ -1,0 +1,78 @@
+﻿<Window x:Class="Nielsen.TechTest.Q1.RemoteRobotController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nielsen.TechTest.Q1.RemoteRobotController"
+        mc:Ignorable="d"
+        Title="Remote Robot Controller"
+        Height="800"
+        Width="1200"
+        MinWidth="900"
+        MinHeight="600"
+        WindowStartupLocation="CenterScreen"
+        FontSize="12">
+    <Window.Resources>
+        <local:LengthHalfCalculator x:Key="LengthHalfCalculator" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas Name="ctlLocationDisplay" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Margin="5,5,5,5" Background="Black">
+            <Line X1="0" Y1="{Binding ElementName=ctlLocationDisplay,Path=ActualHeight,Converter={StaticResource LengthHalfCalculator}}" X2="{Binding ElementName=ctlLocationDisplay,Path=ActualWidth}" Y2="{Binding ElementName=ctlLocationDisplay,Path=ActualHeight,Converter={StaticResource LengthHalfCalculator}}" StrokeThickness="2" Stroke="Green"/>
+            <Line X1="{Binding ElementName=ctlLocationDisplay,Path=ActualWidth,Converter={StaticResource LengthHalfCalculator}}" Y1="0" X2="{Binding ElementName=ctlLocationDisplay,Path=ActualWidth,Converter={StaticResource LengthHalfCalculator}}" Y2="{Binding ElementName=ctlLocationDisplay,Path=ActualHeight}" StrokeThickness="2" Stroke="Green"/>
+            <Rectangle Width="{Binding RobotSize.Width}" Height="{Binding RobotSize.Height}" Canvas.Left="{Binding RobotScreenLocation.PositionX}" Canvas.Top="{Binding RobotScreenLocation.PositionY}" Fill="GreenYellow"/>
+        </Canvas>
+
+        <GroupBox Header="Move Robot" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" FontWeight="Bold" BorderThickness="2" BorderBrush="Silver">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ProgressBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="15" Margin="5,5,5,5" VerticalAlignment="Stretch" Minimum="0" Maximum="100" Width="Auto" MinWidth="300" IsIndeterminate="{Binding AnyCommandRunning, Mode=OneWay}"/>
+                <Button Content="Move Up" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,5,5" Padding="10,1,10,1" VerticalAlignment="Center" Width="Auto" MinWidth="100" Command="{Binding MoveUpCommand}" IsEnabled="{Binding CanMoveNow}"/>
+                <Button Content="Move Left" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Margin="5,5,5,5" Padding="10,1,10,1" VerticalAlignment="Center" Width="Auto" MinWidth="100" Command="{Binding MoveLeftCommand}" IsEnabled="{Binding CanMoveNow}"/>
+                <ComboBox Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" ItemsSource="{Binding ListOfMovingSteps}" SelectedValue="{Binding NoOfStepToMove}" />
+                <Button Content="Move Right" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Margin="5,5,5,5" Padding="10,1,10,1" VerticalAlignment="Center" Width="Auto" MinWidth="100" Command="{Binding MoveRightCommand}" IsEnabled="{Binding CanMoveNow}"/>
+                <Button Content="Move Down" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,5,5" Padding="10,1,10,1" VerticalAlignment="Center" Width="Auto" MinWidth="100" Command="{Binding MoveDownCommand}" IsEnabled="{Binding CanMoveNow}"/>
+            </Grid>
+
+        </GroupBox>
+
+        <GroupBox Header="Current Robot Location" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" FontWeight="Bold" BorderThickness="2" BorderBrush="Silver">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Content="Location X"/>
+                <Label Grid.Column="1" Grid.Row="0" Content="{Binding RobotLocation.PositionX}"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Location Y"/>
+                <Label Grid.Column="1" Grid.Row="1" Content="{Binding RobotLocation.PositionY}"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
