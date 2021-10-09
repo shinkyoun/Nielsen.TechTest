@@ -1,6 +1,7 @@
 # Nielsen.TechTest
 This is Nielsen Tech Test Solution with 2 parts, Answers for Question 1 and Question 2 and has 5 projects
- 
+
+# Answers for Questions
 * Answer for Question 1: Created 2 main projects (one for common library) which are, sort of, simple robot moving in 2-dimension simulation
 	* One for Simple WebAPI service. This is robot hosting application
 	* Another for WebAPI client WPF application<br/>At first I thought web front-end for client application however I decided to go with WPF just to save time (I know canvas in html, drawing rectangle but still taking time more than WPF)
@@ -8,6 +9,7 @@ This is Nielsen Tech Test Solution with 2 parts, Answers for Question 1 and Ques
 	* **My Answer**: My first pick is using BitArray, **Nielsen.TechTest.Q2.Answer.ArrayGeneratorUsingBitArray**
 	* However **Alternative** would be **Nielsen.TechTest.Q2.Answer.ArrayGeneratorUsingReturnArray** if the range by low and high number is not big
 
+# Projects
 * Nielsen.TechTest.Q1.Common : .net standard 2.1 library used by **Nielsen.TechTest.Q1.RemoteRobotController** and **Nielsen.TechTest.Q1.RobotHosting**
 * Nielsen.TechTest.Q1.RobotHosting: .net core 3.1 based ASP.NET WebAPI and **This is one of main solution for Question 1**
 * Nielsen.TechTest.Q1.RemoteRobotController: .net core 3.1 based WPF and **This is another main solution for Question 1**
