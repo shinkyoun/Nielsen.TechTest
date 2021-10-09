@@ -1,5 +1,12 @@
 # Nielsen.TechTest
-This is Nielsen Tech Test Solution and has 5 projects
+This is Nielsen Tech Test Solution with 2 parts, Answers for Question 1 and Question 2 and has 5 projects
+ 
+* Answer for Question 1: Created 2 main projects (one for common library) which are, sort of, simple robot moving in 2-dimension simulation
+	* One for Simple WebAPI service. This is robot hosting application
+	* Another for WebAPI client WPF application<br/>At first I thought web front-end for client application however I decided to go with WPF just to save time (I know canvas in html, drawing rectangle but still taking time more than WPF)
+* Answer for Question 2: Created one main project and another for Unit Testing using MSUnit. To solve this question, I thought main point is, somehow I need to to know previously generated random numbers so that I can generate again if already generated. To do that, I thought different way even if guessed BitArray will be bether than HashSet or plain list. Also thought generating without storing generated random number.
+	* **My Answer**: My first pick is using BitArray, **Nielsen.TechTest.Q2.Answer.ArrayGeneratorUsingBitArray**
+	* However **Alternative** would be **Nielsen.TechTest.Q2.Answer.ArrayGeneratorUsingReturnArray** if the range by low and high number is not big
 
 * Nielsen.TechTest.Q1.Common : .net standard 2.1 library used by **Nielsen.TechTest.Q1.RemoteRobotController** and **Nielsen.TechTest.Q1.RobotHosting**
 * Nielsen.TechTest.Q1.RobotHosting: .net core 3.1 based ASP.NET WebAPI and **This is one of main solution for Question 1**
