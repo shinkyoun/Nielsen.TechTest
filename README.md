@@ -14,7 +14,7 @@ Please check and read **TechTest-Solution.docx** under doc folder
 * Nielsen.TechTest.Q1.Common : .net standard 2.1 library used by **Nielsen.TechTest.Q1.RemoteRobotController** and **Nielsen.TechTest.Q1.RobotHosting**
 * Nielsen.TechTest.Q1.RobotHosting: .net core 3.1 based ASP.NET WebAPI and **This is one of main solution for Question 1**
 * Nielsen.TechTest.Q1.RemoteRobotController: .net core 3.1 based WPF and **This is another main solution for Question 1**
-* Nielsen.TechTest.Q2.Answer: .net standard 2.1 library and **This is another main solution for Question 2**, generating randomly filled array by low and high numbers
+* Nielsen.TechTest.Q2.Answer: .net standard 2.1 library and **This is the main solution, answer for Question 2**, generating randomly filled array by low and high numbers
 	* ArrayGeneratorUsingBitArray.cs: **This is my answer for Question 2**. Keeps the already generated random number in BitArray.
 	* ArrayGeneratorUsingHashSet.cs: Keeps the already generated random number in HashSet<int>.
 	* ArrayGeneratorUsingList.cs: Keeps the already generated random number in List<int>
