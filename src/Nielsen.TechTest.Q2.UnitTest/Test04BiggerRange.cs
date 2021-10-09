@@ -11,6 +11,8 @@ namespace Nielsen.TechTest.Q2.UnitTest
 {
     /// <summary>
     /// Bigger than hundreds of thousands range test
+    /// <seealso cref="ArrayGeneratorUsingList"/> is excluded. Already too slow with <seealso cref="Test02MiddleRange"/>
+    /// <seealso cref="ArrayGeneratorUsingHashSet"/> is excluded. Already too slow with <seealso cref="Test03BigRange"/>
     /// </summary>
     [TestClass]
     public class Test04BiggerRange

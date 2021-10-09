@@ -10,7 +10,8 @@ using Nielsen.TechTest.Q2.Answer;
 namespace Nielsen.TechTest.Q2.UnitTest
 {
     /// <summary>
-    /// Minimum couple of tens of thousands range test
+    /// Minimum couple of tens of thousands range test.
+    /// <seealso cref="ArrayGeneratorUsingList"/> is excluded. Already too slow with <seealso cref="Test02MiddleRange"/>
     /// </summary>
     [TestClass]
     public class Test03BigRange
