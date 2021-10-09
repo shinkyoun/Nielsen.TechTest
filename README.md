@@ -1,5 +1,6 @@
 # Nielsen.TechTest
-This is Nielsen Tech Test Solution with 2 parts, Answers for Question 1 and Question 2 and has 5 projects
+This is Nielsen Tech Test Solution with 2 parts, answers for Question 1 and Question 2 and has 5 projects<br/>
+Please check and read **TechTest-Solution.docx** under doc folder
 
 # Answers for Questions
 * Answer for Question 1: Created 2 main projects (one for common library) which are, sort of, simple robot moving in 2-dimension simulation
