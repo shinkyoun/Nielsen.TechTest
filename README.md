@@ -17,9 +17,9 @@ Please check and read **TechTest-Solution.docx** under doc folder
 | Bigger Range (Bigger Than Million)| NA<br/>Excluded from Test | NA<br/>Excluded from Test | Best | Took almost twice than best |
 
 # Answer for Question 2
-From the begining, I guessed that List<int> will be the worst and HashSet<int> approach might be best in small range however would be getting much slower as the range is getting bigger. However I was not sure which one will be better between **BitArray** and **Directly Filling in the Return Array**<br/>
+From the begining, I guessed that List<int> will be the worst and HashSet<int> approach might be best in small range however would be getting much slower as the range is getting bigger. However I was not sure which one will be better between **BitArray** and **Directly Filling in the Return Array**<br/><br/>
 The actual unit test result with 4 different ranges shows almost same as I guessed and **BitArray** approach shows best performance except **Middle Range (Bigger Than 1000)**<br/>
-Even if **BitArray** approach is not best in **Middle Range (Bigger Than 1000)**, the difference from the best, **Directly Filling in Return Array** is not big and shows best in other 3 ranges<br/><br/>
+Even if **BitArray** approach is not best in **Middle Range (Bigger Than 1000)**, the difference from the best, **Directly Filling in Return Array** is not big, usually maximum couple of milli-seconds only and shows best in other 3 ranges<br/><br/>
 **Therefore 'BitArray approach' is primarily My Answer for Question 2**<br/>
 However still **'Directly Filling in Return Array' would be alternative if number range is not big**
 
