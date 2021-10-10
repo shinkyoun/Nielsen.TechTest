@@ -12,7 +12,7 @@ Please check and read **TechTest-Solution.docx** under doc folder
 
 # 4 Approaches to Solve Question 2
 | Number Range | Using List<int>  | Using HashSet<int>  | Using BitArray  | Directly Filling in Return Array  |
-| ------- | --- | --- |
+| ------- | --- | --- | --- | --- |
 | Small Range (Less Than 1000)| Worst | Less Than 1ms | Less Than 1ms | Less Than 1ms |
 | Middle Range (Less Than 1000)| Worst | 3rd<br/>More than 5 milli-seconds difference from best | 2nd Best<br/>Couple of milli-seconds difference from best | Best |
 | Bige Range (Bigger Than 10000 Less Than Million)| NA<br/>Excluded from Test | 3rd<br/>Took almost twice than best | Best | 2nd Best<br/>Usually 10 milli-seconds difference from best<br/>Sometimes shows Best
